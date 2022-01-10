@@ -1,12 +1,30 @@
+<?php
+
+$id = $_GET['id'] ? $_GET['id'] : null;
+$place = $_GET['place'] ? $_GET['place'] : null;
+
+if (!empty($id) and !empty($place)) {
+    if (base64_encode(base64_decode($id, true)) == $id and base64_encode(base64_decode($place, true)) == $place) {
+        $id = base64_decode($_GET['id']);
+        $place = " (" . base64_decode($_GET['place']) . ")";
+    } else {
+        $id = '';
+        $place = '';
+    }
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, sif (nk-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="robots" content="noindex">
-    <meta name="googlebot" content="noindex">    
+    <meta name="googlebot" content="noindex">
     <meta name="description" content="Our Wedding - Melly Handayani & Ade Fathudin">
     <meta property="og:title" content="Melly and Ade Wedding" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +38,7 @@
 
 
     <title>Our Wedding - Melly Handayani and Ade Fathudin</title>
-    <link rel="icon" href="img/favicon.png" type="image/gif"/>
+    <link rel="icon" href="img/favicon.png" type="image/gif" />
 
 
     <!-- Bootstrap CSS -->
@@ -28,30 +46,27 @@
 
 
     <!-- fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Dosis|Kaushan+Script|Open+Sans:400,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Dancing+Script|Dosis|Kaushan+Script|Open+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
     <!-- style sheets -->
-    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/hover-min.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
 
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50" id="home">
-    <nav class="navbar navbar-expand-xl navbar-light fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top  justify-content-center">
         <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand wow slideInLeft" href="#">Melly <i class="fas fa-heartbeat hvr-pulse"></i> Adef<span
-                    class="nav-logo-image"></span></a>
+            <a class="navbar-brand wow slideInLeft" href="#">Melly <i class="fas fa-heartbeat hvr-pulse"></i> Ade<span class="nav-logo-image"></span></a>
 
             <!-- Toggler/collapsibe Button -->
 
@@ -90,7 +105,7 @@
     </nav>
 
 
-
+    <!-- 
     <section class="section-1">
         <div class="container-fluid">
             <div class="row">
@@ -107,13 +122,13 @@
             </div>
         </div>
     </section>
-
+ -->
 
     <section class="section-2" id="cuple">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
-                    <h1>Assalamu'alaikum</h1>
+                    <h1>اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَا تُهُ</h1>
                     <div class="text-section">
                         <p>
                             Dengan memohon rahmat dan ridho Allah SWT yang telah menciptakan makhluknya secara
@@ -132,7 +147,7 @@
                                 <h3 class="">Melly Handayani</h3>
                                 <p>
                                     <span class="font-italic">Putri Pertama dari</span><br>
-                                    <span>Bpk. Samad & Ibu Mesah</span>
+                                    <span>Bpk. Samad & Ibu Nesah</span>
                                 </p>
 
                             </div>
@@ -147,7 +162,7 @@
                                 <h3 class="">Ade Fathudin S.Kom</h3>
                                 <p>
                                     <span class="font-italic">Putra Keenam dari</span><br>
-                                    <span>Bpk. A. Komarudi & Almh. Ibu Enah</span>
+                                    <span>Bpk. A. Komarudin & Almh. Ibu Enah</span>
                                 </p>
                             </div>
                         </div>
@@ -185,11 +200,12 @@
                 <div class="col-xl-6 col-md-8 event text-center">
                     <div class="col-xl-11 p-0 border-area">
                         <div class="content">
-                            <h1>Akad Nikah</h1>
-                            <p>
-                                <i class="fa fa-calendar-alt"></i> Minggu, 06 Februari 2022. 09:00 WIB - Selesai.<br>
-                                <i class="fa fa-street-view"></i> Kp. Kebantenan, Jl. Koja 2 RT/RW 003/012, Jatiasih,
-                                Bekasi
+                            <h1 class="mb-4">Akad Nikah</h1>
+                            <h3 class="mb-4"><i class="fa fa-calendar-alt"></i></h3>
+                            <h6>Minggu, 06 Februari 2022 <br> 09:00 WIB - Selesai</h6><br>
+                            <h3 class="mb-4"><i class="fa fa-map-marker-alt"></i></h3>
+                            <h6 class="font-weight-bold">Kediaman Mempelai Wanita</h6>
+                            <h6>Kp. Kebantenan, Jl. Koja 2 RT/RW 003/012, Jatiasih, Bekasi</h6>
                             </p>
                         </div>
                     </div>
@@ -198,12 +214,12 @@
                 <div class="col-xl-6 col-md-8 event text-center">
                     <div class="col-xl-11 p-0 border-area">
                         <div class="content">
-                            <h1>Resepsi</h1>
-                            <p>
-                                <i class="fa fa-calendar-alt"></i> Minggu malam Senin, 06 - 07 Februari 2022. 10:00 WIB
-                                - Selesai.<br>
-                                <i class="fa fa-street-view"></i> Kp. Kebantenan, Jl. Koja 2 RT/RW 003/012, Jatiasih,
-                                Bekasi
+                            <h1 class="mb-4">Resepsi</h1>
+                            <h3 class="mb-4"><i class="fa fa-calendar-alt"></i></h3>
+                            <h6>Minggu malam Senin, 06 - 07 Februari 2022<br> 10:00 WIB - Selesai</h6><br>
+                            <h3 class="mb-4"><i class="fa fa-map-marker-alt"></i></h3>
+                            <h6 class="font-weight-bold">Kediaman Mempelai Wanita</h6>
+                            <h6>Kp. Kebantenan, Jl. Koja 2 RT/RW 003/012, Jatiasih, Bekasi</h6>
                             </p>
                         </div>
                     </div>
@@ -265,10 +281,7 @@
             <div class="row">
                 <div class="col">
                     <div class="mapouter">
-                        <div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas"
-                                src="https://maps.google.com/maps?q=-6.313750,%20106.959733&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                                href="https://2piratebay.org"></a><br>
+                        <div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=-6.313750,%20106.959733&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br>
                             <style>
                                 .mapouter {
                                     position: relative;
@@ -316,8 +329,7 @@
                             <div class="col-xl-12 col-md-12 col-12">
                                 <div class="control-group">
                                     <div class="controls">
-                                        <input type="text" class="form-control" placeholder="Full Name" id="name"
-                                            required data-validation-required-message="Please enter your name" />
+                                        <input type="text" class="form-control" placeholder="Nama anda" id="name" required data-validation-required-message="Please enter your name" value="<?= $id . $place ?>" />
                                         <p class="help-block"></p>
                                     </div>
                                 </div>
@@ -325,17 +337,13 @@
                             <div class="col-xl-12 col-md-12 col-12">
                                 <div class="control-group">
                                     <div class="controls">
-                                        <textarea rows="10" cols="100" class="form-control" placeholder="Message"
-                                            id="message" required
-                                            data-validation-required-message="Please enter your message" minlength="5"
-                                            data-validation-minlength-message="Min 5 characters" maxlength="999"
-                                            style="resize:none"></textarea>
+                                        <textarea rows="10" cols="100" class="form-control" placeholder="Kirim ucapan do'a" id="message" required data-validation-required-message="Kirim ucapan do'a" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-12 col-md-12 col-12 send-button">
+                            <div class="col-xl-12 col-md-12 col-12 mt-4 d-flex justify-content-end">
                                 <!-- For success/fail messages -->
-                                <button type="submit" class="btn btn-primary">Send</button><br />
+                                <button type="submit" class="btn btn-outline-primary">send <i class="fa fa-dove"></i></button><br />
                             </div>
                         </div>
                     </form>
@@ -364,26 +372,52 @@
                         Atas kehadiran dan do’a restu Bapak/Ibu/Saudara/i Kami ucapkan terimakasih.
                     </p>
                     <div class="section-2">
-                        <h1 class="mt-4">Wassalamu’alaikum</h1>
+                        <h1 class="mt-4">وَالسَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h1>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <footer>
-        <p class="text-center">&copy; 2021 - <a href="https://adefathudin.com" target="_blank">Ade Fathudin</a></p>
+        <p class="text-center">&copy; 2021 - Created with <i class="fa fa-heart text-danger"></i> by <a href="https://adefathudin.com" target="_blank">Ade Fathudin</a></p>
     </footer>
+
+    <?php if ($id != '' and $place != '') { ?>
+
+        <div class="modal fade" id="mymodalx" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog cascading-modal modal-avatar modal-sm" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body text-center mb-1 mt-2">
+                        <h5 class="mt-1 mb-2" style="font-family: 'Dancing Script', cursive;color: #000000;">Wedding Invitation</h5>
+                        <h3 class="mt-1 mb-2 font-weight-bold" style="font-family: 'Dancing Script', cursive;color: #000000;">Melly & Ade</h3>
+                        <div class="modal-body">
+                            <p style="margin-bottom: 15px;">Dear</p>
+                            <h3 style="font-family: 'Comfortaa', cursive;"><?= $id ?></h3>
+                            <p style="font-size: 16px;">di <?= $place ?></p>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Open</button>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+
+    <?php } ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="contact/jqBootstrapValidation.js"></script>
-    <script src="contact/contact_me.js"></script>
+    <!--   <script src="contact/jqBootstrapValidation.js"></script>
+    <script src="contact/contact_me.js"></script> -->
 
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
@@ -392,14 +426,16 @@
 
     <!-- stickey nav -->
     <script>
-        $(window).scroll(function () {
+        $(window).scroll(function() {
             if ($(this).scrollTop() > 5) {
                 $(".navbar").addClass("bg-transparent")
             } else {
                 $(".navbar").removeClass("bg-transparent")
             }
 
-        })
+        });
+
+        $('#mymodalx').modal('show');
     </script>
     <!-- stickey nav end -->
 
@@ -446,9 +482,9 @@
 
     <!-- smooth scroll -->
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // Add smooth scrolling to all links
-            $("a").on('click', function (event) {
+            $("a").on('click', function(event) {
 
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
@@ -462,7 +498,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function () {
+                    }, 800, function() {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;

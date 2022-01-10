@@ -174,7 +174,7 @@ body {
 
 
 .section-2 h1 {
-    font-size: 45px;
+    font-size: 30px;
     font-family: 'Dancing Script', cursive;
     text-transform: capitalize;
     text-align: center;
@@ -977,10 +977,8 @@ body {
     font-size: 14px;
     line-height: normal;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.29);
     background-clip: padding-box;
     border: none;
-    border-radius: 0;
 }
 
 
