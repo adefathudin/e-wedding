@@ -63,7 +63,7 @@ if (!empty($id) and !empty($place)) {
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50" id="home">
-    <nav class="navbar navbar-expand-xl navbar-light fixed-top  justify-content-center">
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top">
         <div class="container">
             <!-- Brand -->
             <a class="navbar-brand wow slideInLeft" href="#">Melly <i class="fas fa-heartbeat hvr-pulse"></i> Ade<span class="nav-logo-image"></span></a>
@@ -105,24 +105,18 @@ if (!empty($id) and !empty($place)) {
     </nav>
 
 
-    <!-- 
+    
     <section class="section-1">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xl-6 content offset-xl-6">
                     <div class="wrap-content">
-                        <img src="img/section1/invitationbg.png" alt="Los Angeles">
-                        <div class="text-box">
-                            <h3 class="">Melly</h3>
-                            <h3 class="">Adef</h3>
-                            <p class="small-text">06.02.2021</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
- -->
+ 
 
     <section class="section-2" id="cuple">
         <div class="container">
