@@ -963,8 +963,8 @@ body {
 
 
 .section-8 .form-control:focus {
-    color: #495057;
-    background-color: #fff;
+    color: #ec168c;
+    background-color: #495057;
     border-color: #ffffff;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
@@ -972,11 +972,11 @@ body {
 
 .section-8 .form-control {
     display: block;
-    width: 100%;
+    width: 100%;    
     padding: 8px 15px;
     font-size: 14px;
     line-height: normal;
-    color: #ffffff;
+    color: #495057;
     background-clip: padding-box;
     border: none;
 }
@@ -992,8 +992,8 @@ body {
 
 .section-8 .form-control::placeholder {
 
-    color: white;
-    background: rgba(255, 0, 0, 0);
+    color: rgb(56, 52, 52);
+    background: rgb(68, 61, 61);
 
 }
 

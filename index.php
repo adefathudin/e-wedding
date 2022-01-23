@@ -59,6 +59,56 @@ if (!empty($id) and !empty($place)) {
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
+    <style>
+        .chat-online {
+            color: #34ce57
+        }
+
+        .chat-offline {
+            color: #e4606d
+        }
+
+        .chat-messages {
+            display: flex;
+            flex-direction: column;
+            max-height: 800px;
+            overflow-y: scroll
+        }
+
+        .chat-message-left,
+        .chat-message-right {
+            display: flex;
+            flex-shrink: 0
+        }
+
+        .chat-message-left {
+            margin-right: auto
+        }
+
+        .chat-message-right {
+            flex-direction: row-reverse;
+            margin-left: auto
+        }
+
+        .py-3 {
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+
+        .px-4 {
+            padding-right: 1.5rem !important;
+            padding-left: 1.5rem !important;
+        }
+
+        .flex-grow-0 {
+            flex-grow: 0 !important;
+        }
+
+        .border-top {
+            border-top: 1px solid #dee2e6 !important;
+        }
+    </style>
+
 
 </head>
 
@@ -105,7 +155,7 @@ if (!empty($id) and !empty($place)) {
     </nav>
 
 
-    
+
     <section class="section-1">
         <div class="container-fluid">
             <div class="row">
@@ -116,7 +166,7 @@ if (!empty($id) and !empty($place)) {
             </div>
         </div>
     </section>
- 
+
 
     <section class="section-2" id="cuple">
         <div class="container">
@@ -271,40 +321,19 @@ if (!empty($id) and !empty($place)) {
                     <h1>Lokasi Acara</h1>
                 </div>
             </div>
+            <div class="d-flex justify-content-center">
 
+                <a href="https://goo.gl/maps/Vk58z1Xsg5n4Qb6V7" target="_blank" class="btn btn-primary mb-4 btn-outline-primary"><i class="fa fa-globe-asia fa-spin"></i> Open Google Maps <i class="fas fa-map-marked-alt text-danger"></i></a>
+            </div>
             <div class="row">
                 <div class="col">
-                    <div class="mapouter">
-                        <div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=-6.313750,%20106.959733&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2piratebay.org"></a><br>
-                            <style>
-                                .mapouter {
-                                    position: relative;
-                                    text-align: right;
-                                    height: 100%;
-                                    width: 100%;
-                                    min-height: 300px;
-                                }
-                            </style><a href="https://www.embedgooglemap.net">google map website widget</a>
-                            <style>
-                                .gmap_canvas {
-                                    overflow: hidden;
-                                    background: none !important;
-                                    height: 100%;
-                                    width: 100%;
-                                    min-height: 300px;
-                                }
-                            </style>
-                        </div>
-                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6184872031868!2d106.95753351531975!3d-6.313744663544738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcd0f240fa66f66f5!2zNsKwMTgnNDkuNSJTIDEwNsKwNTcnMzUuMCJF!5e0!3m2!1sen!2sid!4v1642401469706!5m2!1sen!2sid" width="100%" height="100%" style="border:0; min-height: 350px" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-    <section class="section-8" id="rsvp">
+<!--
+    <section class="section-7" id="rsvp" style="background: #efefef;">
         <div class="container">
             <div class="row">
 
@@ -312,38 +341,89 @@ if (!empty($id) and !empty($place)) {
                     <h1>Ucapan Do'a</h1>
                 </div>
             </div>
-
-            <div class="row   d-flex align-items-center justify-content-center">
-                <div class="col-xl-8 rsvp-col">
-
-
-                    <!-- Form itself -->
-                    <form name=" sentMessage" id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-xl-12 col-md-12 col-12">
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <input type="text" class="form-control" placeholder="Nama anda" id="name" required data-validation-required-message="Please enter your name" value="<?= $id . $place ?>" />
-                                        <p class="help-block"></p>
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-8">
+                    <main class="content">
+                        <div class="container p-0">
+                            <div class="card shadow">
+                                <div class="row g-0">
+                                    <div class="col-12 col-lg-12 col-xl-12">
+                                        <div class="position-relative">
+                                            <div class="flex-grow-0 py-3 px-4 border-top">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control mb-2" placeholder="Nama kamu" value="<?= $id . $place ?>">
+                                                    <textarea class="form-control mb-2" placeholder="Ucapan do'a..."></textarea>
+                                                    <div class="d-flex justify-content-end">
+                                                    <button class="btn btn-outline-primary"><span style="font-style: 'Dancing Script';">kirim </span> <i class="fa fa-hand-holding-heart text-danger"></i></button>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div class="chat-messages p-4">
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message-left pb-4">
+                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
+                                                        <div class="font-weight-bold">Ade Fathudin</div>
+                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
+                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-12 col-md-12 col-12">
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <textarea rows="10" cols="100" class="form-control" placeholder="Kirim ucapan do'a" id="message" required data-validation-required-message="Kirim ucapan do'a" minlength="5" data-validation-minlength-message="Min 5 characters" maxlength="999" style="resize:none"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-12 col-md-12 col-12 mt-4 d-flex justify-content-end">
-                                <!-- For success/fail messages -->
-                                <button type="submit" class="btn btn-outline-primary">send <i class="fa fa-dove"></i></button><br />
                             </div>
                         </div>
-                    </form>
-
-
-
+                    </main>
                 </div>
             </div>
 
@@ -351,6 +431,7 @@ if (!empty($id) and !empty($place)) {
         </div>
         </div>
     </section>
+    ->
 
     <section class="section-9">
         <div class="container">
@@ -477,6 +558,7 @@ if (!empty($id) and !empty($place)) {
     <!-- smooth scroll -->
     <script>
         $(document).ready(function() {
+
             // Add smooth scrolling to all links
             $("a").on('click', function(event) {
 
@@ -499,6 +581,13 @@ if (!empty($id) and !empty($place)) {
                     });
                 } // End if
             });
+
+            if ('<?= $id ?>') {
+                //$('#contactForm').find('#message').focus();
+                $('#contactForm').find('#name').attr('readonly', true);
+            } else {
+                $('#contactForm').find('#name').focus();
+            }
         });
     </script>
 
