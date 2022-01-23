@@ -431,7 +431,7 @@ if (!empty($id) and !empty($place)) {
         </div>
         </div>
     </section>
-    ->
+                    -->
 
     <section class="section-9">
         <div class="container">
