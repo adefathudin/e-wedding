@@ -31,9 +31,7 @@ if (!empty($id) and !empty($place)) {
     <meta property="og:image" content="http://melly.adefathudin.com/img/section1/ma.jpg">
     <meta property="og:image" itemprop="image" content="http://melly.adefathudin.com/img/section1/ma.jpg">
     <link itemprop="thumbnailUrl" href="http://melly.adefathudin.com/img/section1/ma.jpg">
-    <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
-        <link itemprop="url" href="http://melly.adefathudin.com/img/section1/ma.jpg">
-    </span>
+    <link itemprop="url" href="http://melly.adefathudin.com/img/section1/ma.jpg">
     <meta property='og:type' content='article'>
 
 
@@ -118,39 +116,33 @@ if (!empty($id) and !empty($place)) {
             <!-- Brand -->
             <a class="navbar-brand wow slideInLeft" href="#">Melly <i class="fas fa-heartbeat hvr-pulse"></i> Ade<span class="nav-logo-image"></span></a>
 
-            <!-- Toggler/collapsibe Button -->
+<!-- Toggler/collapsibe Button -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
-            <!-- Navbar links 
+            <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="#home">HOME</a>
+                        <a class="nav-link" href="#mukadimah">Mukadimah</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#cuple">cuple</a>
+                        <a class="nav-link" href="#akad-resepsi">Akad & Resepsi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#story">story</a>
+                        <a class="nav-link" href="#event">Event</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#events">event</a>
+                        <a class="nav-link" href="#lokasi-acara">Lokasi Acara</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#people">people</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery-sec">galley</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#rsvp">rsvp</a>
-                    </li>
-
-
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#doa">Ucapan Do'a</a>
+                    </li> -->
                 </ul>
-            </div> -->
+            </div>
         </div>
     </nav>
 
@@ -168,7 +160,7 @@ if (!empty($id) and !empty($place)) {
     </section>
 
 
-    <section class="section-2" id="cuple">
+    <section class="section-2" id="mukadimah">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
@@ -230,7 +222,7 @@ if (!empty($id) and !empty($place)) {
         </div>
     </section>
 
-    <section class="section-5" id="events">
+    <section class="section-5" id="akad-resepsi">
         <div class="container">
             <div class="row">
 
@@ -250,7 +242,6 @@ if (!empty($id) and !empty($place)) {
                             <h3 class="mb-4"><i class="fa fa-map-marker-alt"></i></h3>
                             <h6 class="font-weight-bold">Kediaman Mempelai Wanita</h6>
                             <h6>Kp. Kebantenan, Jl. Koja 2 RT/RW 003/012, Jatiasih, Bekasi</h6>
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -264,22 +255,16 @@ if (!empty($id) and !empty($place)) {
                             <h3 class="mb-4"><i class="fa fa-map-marker-alt"></i></h3>
                             <h6 class="font-weight-bold">Kediaman Mempelai Wanita</h6>
                             <h6>Kp. Kebantenan, Jl. Koja 2 RT/RW 003/012, Jatiasih, Bekasi</h6>
-                            </p>
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
         </div>
     </section>
 
-    <section class="section-3">
+    <section class="section-3" id="event">
         <div class="container">
             <div class="row">
-
-
                 <!-- days -->
                 <div class="col-xl-3 col-lg-3 col-md-3 col-6">
                     <p id="days">111</p>
@@ -297,43 +282,40 @@ if (!empty($id) and !empty($place)) {
                     <p id="minutes">9</p>
                     <h1>Menit</h1>
                 </div>
-
-
                 <!-- seconds -->
                 <div class="col-xl-3 col-lg-3 col-md-3 col-6">
                     <p id="Seconds">0</p>
                     <h1>Detik</h1>
                 </div>
-
             </div>
         </div>
-
     </section>
 
     <!--section 7-->
 
-
-    <section class="section-7" id="gallery-sec">
+    <section class="section-7" id="lokasi-acara">
         <div class="container">
             <div class="row ">
-
                 <div class="col-xl-12 heading">
                     <h1>Lokasi Acara</h1>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
+            <div class="text-section">
+                <p>Kp. Kebantenan, Jl. Koja 2 RT/RW 003/012, Jatiasih, Bekasi</p>
+                <p>
 
-                <a href="https://goo.gl/maps/Vk58z1Xsg5n4Qb6V7" target="_blank" class="btn btn-primary mb-4 btn-outline-primary"><i class="fa fa-globe-asia fa-spin"></i> Open Google Maps <i class="fas fa-map-marked-alt text-danger"></i></a>
+                    <a href="https://goo.gl/maps/Vk58z1Xsg5n4Qb6V7" target="_blank" class="btn btn-primary mb-4 btn-outline-primary"><i class="fa fa-globe-asia fa-spin"></i> Open Google Maps <i class="fas fa-map-marked-alt text-danger"></i></a>
+                </p>
             </div>
             <div class="row">
                 <div class="col">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6184872031868!2d106.95753351531975!3d-6.313744663544738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcd0f240fa66f66f5!2zNsKwMTgnNDkuNSJTIDEwNsKwNTcnMzUuMCJF!5e0!3m2!1sen!2sid!4v1642401469706!5m2!1sen!2sid" width="100%" height="100%" style="border:0; min-height: 350px" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6184872031868!2d106.95753351531975!3d-6.313744663544738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcd0f240fa66f66f5!2zNsKwMTgnNDkuNSJTIDEwNsKwNTcnMzUuMCJF!5e0!3m2!1sen!2sid!4v1642401469706!5m2!1sen!2sid" width="100%" height="100%" style="border:0; min-height: 350px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
-<!--
-    <section class="section-7" id="rsvp" style="background: #efefef;">
+<!-- 
+    <section class="section-7" id="doa" style="background: #efefef;">
         <div class="container">
             <div class="row">
 
@@ -351,15 +333,16 @@ if (!empty($id) and !empty($place)) {
                                         <div class="position-relative">
                                             <div class="flex-grow-0 py-3 px-4 border-top">
                                                 <div class="form-group">
-                                                    <input type="text" class="form-control mb-2" placeholder="Nama kamu" value="<?= $id . $place ?>">
-                                                    <textarea class="form-control mb-2" placeholder="Ucapan do'a..."></textarea>
-                                                    <div class="d-flex justify-content-end">
-                                                    <button class="btn btn-outline-primary"><span style="font-style: 'Dancing Script';">kirim </span> <i class="fa fa-hand-holding-heart text-danger"></i></button>
-                                                    </div>
-                                                    
+                                                    <form method="POST" action="" class="form-doa">
+                                                        <input type="text" class="form-control mb-2" placeholder="Nama kamu" value="<?= $id . $place ?>">
+                                                        <textarea class="form-control mb-2" placeholder="Ucapan do'a..."></textarea>
+                                                        <div class="d-flex justify-content-end">
+                                                            <button class="btn btn-outline-primary btn-submit" type="submit"><span style="font-style: 'Dancing Script';">kirim </span> <i class="fa fa-hand-holding-heart text-danger"></i></button>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
-                                            <hr/>
+                                            <hr />
                                             <div class="chat-messages p-4">
                                                 <div class="chat-message-left pb-4">
                                                     <div class="flex-shrink-1 bg-light rounded py-2 px-3">
@@ -426,12 +409,9 @@ if (!empty($id) and !empty($place)) {
                     </main>
                 </div>
             </div>
-
-
         </div>
-        </div>
-    </section>
-                    -->
+    </section> -->
+
 
     <section class="section-9">
         <div class="container">
@@ -483,20 +463,37 @@ if (!empty($id) and !empty($place)) {
 
     <?php } ?>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script> -->
     <script src="js/bootstrap.min.js"></script>
+<!-- 
+    <script>
+        var JS = {
+            Init: function() {
+                var _this = this;
+                _this._init_panel_doa();
+            },            
+            _init_panel_doa: function() {
 
-    <!--   <script src="contact/jqBootstrapValidation.js"></script>
-    <script src="contact/contact_me.js"></script> -->
+                var $panel_doa = $('#doa');
+                var $form = $anel_doa.find('.form-doa');
 
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.fancybox.js"></script>
-    <script src="js/owl.carousel.js"></script>
+                form.validate({
+                    submitHandler: function(form){
+                        $(form).ajaxSubmit({
+                            url: $(form).attr('action'),
+                            method: $(form).attr('method'),
+                            beforeSubmit: function(){
+                                $form.find('type["submit"]').text('processing')
+                            }
+                        })
+                    }
+                })
+            }
+
+        }
+    </script> -->
+
+    </script>
 
 
     <!-- stickey nav -->
@@ -524,35 +521,6 @@ if (!empty($id) and !empty($place)) {
     </script>
 
     <!--wow js end-->
-
-
-    <!--owl carasol-->
-
-    <script>
-        $('.owl-carousel').owlCarousel({
-            autoplay: true,
-            mousescroll: true,
-            center: true,
-            loop: true,
-            margin: 10,
-            nav: false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                }
-            }
-        })
-    </script>
-    <!--owl carasol end-->
-
-
-
 
 
     <!-- smooth scroll -->
@@ -588,6 +556,12 @@ if (!empty($id) and !empty($place)) {
             } else {
                 $('#contactForm').find('#name').focus();
             }
+
+            var doa = $('#doa');
+            var form = doa.find('.form-doa');
+
+            form
+
         });
     </script>
 
