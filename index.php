@@ -114,11 +114,12 @@ if (!empty($id) and !empty($place)) {
     <nav class="navbar navbar-expand-xl navbar-light fixed-top">
         <div class="container">
             <!-- Brand -->
-            <a class="navbar-brand wow slideInLeft" href="#">Melly <i class="fas fa-heartbeat hvr-pulse"></i> Ade<span class="nav-logo-image"></span></a>
+            <a class="navbar-brand wow slideInLeft" href="#" style="font-size: 20px;">Melly <i class="fas fa-heartbeat hvr-pulse"></i> Ade</a>
 
-<!-- Toggler/collapsibe Button -->
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <i class="fa fa-list"></i>
             </button>
 
 
@@ -314,7 +315,7 @@ if (!empty($id) and !empty($place)) {
             </div>
         </div>
     </section>
-<!-- 
+    <!-- 
     <section class="section-7" id="doa" style="background: #efefef;">
         <div class="container">
             <div class="row">
@@ -465,7 +466,7 @@ if (!empty($id) and !empty($place)) {
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-<!-- 
+    <!-- 
     <script>
         var JS = {
             Init: function() {
