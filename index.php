@@ -139,9 +139,9 @@ if (!empty($id) and !empty($place)) {
                     <li class="nav-item">
                         <a class="nav-link" href="#lokasi-acara">Lokasi Acara</a>
                     </li>
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#doa">Ucapan Do'a</a>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -315,7 +315,7 @@ if (!empty($id) and !empty($place)) {
             </div>
         </div>
     </section>
-    <!-- 
+    
     <section class="section-7" id="doa" style="background: #efefef;">
         <div class="container">
             <div class="row">
@@ -324,95 +324,10 @@ if (!empty($id) and !empty($place)) {
                     <h1>Ucapan Do'a</h1>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-xl-8">
-                    <main class="content">
-                        <div class="container p-0">
-                            <div class="card shadow">
-                                <div class="row g-0">
-                                    <div class="col-12 col-lg-12 col-xl-12">
-                                        <div class="position-relative">
-                                            <div class="flex-grow-0 py-3 px-4 border-top">
-                                                <div class="form-group">
-                                                    <form method="POST" action="" class="form-doa">
-                                                        <input type="text" class="form-control mb-2" placeholder="Nama kamu" value="<?= $id . $place ?>">
-                                                        <textarea class="form-control mb-2" placeholder="Ucapan do'a..."></textarea>
-                                                        <div class="d-flex justify-content-end">
-                                                            <button class="btn btn-outline-primary btn-submit" type="submit"><span style="font-style: 'Dancing Script';">kirim </span> <i class="fa fa-hand-holding-heart text-danger"></i></button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                            <hr />
-                                            <div class="chat-messages p-4">
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                                <div class="chat-message-left pb-4">
-                                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3">
-                                                        <div class="font-weight-bold">Ade Fathudin</div>
-                                                        <div class="text-muted small text-nowrap mb-2">06 Feb 2022 12:09 WIB</div>
-                                                        Sit meis deleniti eu, pri vidit meliore docendi ut, an eum erat animal commodo.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-                </div>
-            </div>
+            <div class="powr-comments" id="0caac1ba_1644046490"></div><script src="https://www.powr.io/powr.js?platform=html"></script>
         </div>
-    </section> -->
-
+    </section>
+    
 
     <section class="section-9">
         <div class="container">
@@ -466,37 +381,7 @@ if (!empty($id) and !empty($place)) {
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <!-- 
-    <script>
-        var JS = {
-            Init: function() {
-                var _this = this;
-                _this._init_panel_doa();
-            },            
-            _init_panel_doa: function() {
-
-                var $panel_doa = $('#doa');
-                var $form = $anel_doa.find('.form-doa');
-
-                form.validate({
-                    submitHandler: function(form){
-                        $(form).ajaxSubmit({
-                            url: $(form).attr('action'),
-                            method: $(form).attr('method'),
-                            beforeSubmit: function(){
-                                $form.find('type["submit"]').text('processing')
-                            }
-                        })
-                    }
-                })
-            }
-
-        }
-    </script> -->
-
-    </script>
-
-
+    
     <!-- stickey nav -->
     <script>
         $(window).scroll(function() {
